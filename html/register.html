@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins:wght@400;800&display=swap" rel="stylesheet">
     <title>Home</title>
@@ -17,23 +17,34 @@
                 <div class= "wrap-login">
                     <div class = "headerimg">
                         <span>
-                            SIGN IN
+                            SIGN UP
                         </span>
                     </div>
                     <form class="loginform">
+                        <div class="login-input">
+                            <span class="radio-label">Select one:</span>
+                            <input type="radio" class="radio-btn" name="category" value="Employee"><span class="radio-label">Employee</span>
+                            <input type="radio" class="radio-btn" name="category" value="Company"><span class="radio-label">Company</span>
+                        </div>
                         <div class = "login-input">
                             <input class="input100" type="email" name="email" placeholder="Enter Email">
                         </div>
                         <div class = "login-input">
+                            <input class="input100" type="text" name="username" placeholder="Enter Full Name/Company Name">
+                        </div>
+                        <div class = "login-input">
                             <input class="input100" type="password" name="password" placeholder="Enter Password">
                         </div>
+                        <div class = "login-input">
+                            <input class="input100" type="password" name="cpassword" placeholder="Enter Password again">
+                        </div>
                         <div class="login-btn">
-                            <button class="sub-btn" name="submit">Login</button>
+                            <button class="sub-btn" name="submit">Sign Up</button>
                         </div>
                         <div class="txt">
-                            Don't have an account?&nbsp
-                            <a href="html/register.html" >
-                                 Sign Up 
+                            &nbsp&nbsp Have an account?&nbsp
+                            <a href="../index.html" >
+                                 Sign In 
                             </a>
                         </div>
                     </form>
