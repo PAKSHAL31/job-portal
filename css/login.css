@@ -28,6 +28,7 @@
  }
 
 .wrap-login{
+    margin-top: 5%;
     width: 670px;
     background: #fff;
     border-radius: 10px;
@@ -217,21 +218,23 @@ display: flex;
 
 @media (max-width:400px){
     .loginform{
-        padding: 40px 15px 57px 110px;
+        padding: 40px 5px 57px 70px;
     }
 
     .sub-btn{
-        margin-left: -10px;
+        margin-left: 15px;
         margin-top: -20px;
     }
 
     .txt{
-        margin-left: -18%;
+        margin-left: -2px;
         font-size: 13px;
     }
 
     .radio-btn{
-        margin-left: 2%;
+        margin-left: 0px;
+        height: 10px;
+        width: 10px;
         color: #555555;
     }
 

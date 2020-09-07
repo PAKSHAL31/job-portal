@@ -20,23 +20,23 @@
                             SIGN UP
                         </span>
                     </div>
-                    <form class="loginform">
+                    <form class="loginform" action="register.html" method="POST">
                         <div class="login-input">
                             <span class="radio-label">Select one:</span>
-                            <input type="radio" class="radio-btn" name="category" value="Employee"><span class="radio-label">Employee</span>
+                            <input type="radio" class="radio-btn" name="category" value="Employee"><span class="radio-label"></span>Employee</span>
                             <input type="radio" class="radio-btn" name="category" value="Company"><span class="radio-label">Company</span>
                         </div>
                         <div class = "login-input">
-                            <input class="input100" type="email" name="email" placeholder="Enter Email">
+                            <input class="input100" type="email" name="email" placeholder="Enter Email" required/>
                         </div>
                         <div class = "login-input">
-                            <input class="input100" type="text" name="username" placeholder="Enter Full Name/Company Name">
+                            <input class="input100" type="text" name="username" placeholder="Enter Full Name/Company Name" required/>
                         </div>
                         <div class = "login-input">
-                            <input class="input100" type="password" name="password" placeholder="Enter Password">
+                            <input class="input100" type="password" name="password" placeholder="Enter Password" required/>
                         </div>
                         <div class = "login-input">
-                            <input class="input100" type="password" name="cpassword" placeholder="Enter Password again">
+                            <input class="input100" type="password" name="cpassword" placeholder="Enter Password again" required/>
                         </div>
                         <div class="login-btn">
                             <button class="sub-btn" name="submit">Sign Up</button>
