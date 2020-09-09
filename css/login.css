@@ -78,7 +78,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 43px 88px 93px 190px;
+    padding: 43px 78px 93px 180px;
 }
 
 .login-input{
@@ -119,12 +119,13 @@ display: flex;
   border-radius: 25px;
   font-family: 'Balsamiq Sans', cursive;
   font-size: 18px;
-  margin-left: 75px;
+  margin-left: 20%;
   color: #fff;
   line-height: 1.2;
   outline: none;
   border: none;
   box-shadow: 3px 3px 10px #888888;
+  margin-top: -20px;
 }
 
 .sub-btn:hover{
@@ -150,6 +151,7 @@ display: flex;
 }
 
 .radio-btn{
+    cursor: pointer;
     margin-left: 5%;
     color: #555555;
 }
@@ -162,28 +164,13 @@ display: flex;
 }
 
 
-@media (max-width:636px){
-
-    .sub-btn{
-        margin-top: -20px;
-        margin-left: 30px;
-    }
-
-    .txt{
-        margin-left: -10px;
-    }
-} 
-
-
-
-@media (max-width:593px){
+@media (max-width:604px){
     .loginform{
         padding: 43px 15px 57px 125px;
     }
 
     .sub-btn{
-        margin-top: -20px;
-        margin-left: 50px;
+        margin-left: 22%;
     }
 
     .txt{
@@ -191,14 +178,16 @@ display: flex;
     }
 }
 
-@media (max-width:455px){
+
+
+
+@media (max-width:470px){
     .loginform{
         padding: 43px 15px 57px 120px;
     }
 
     .sub-btn{
-        margin-left: 4%;
-        margin-top: -20px;
+        margin-left: 7%;
     }
 
     .txt{
@@ -223,7 +212,6 @@ display: flex;
 
     .sub-btn{
         margin-left: 15px;
-        margin-top: -20px;
     }
 
     .txt{
@@ -240,6 +228,10 @@ display: flex;
 
     .radio-label{
         margin-left: 1%;
+        font-size: 13px;
+    }
+
+    .input100{
         font-size: 13px;
     }
 }

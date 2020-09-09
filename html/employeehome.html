@@ -4,6 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="../css/employeehome.css" />
+      <link rel="stylesheet" href="../css/navbar.css" />
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -20,7 +21,7 @@
          <a href="#" class="logo">logo</a>
          <ul class="main-nav" id="js-menu">
             <li>
-               <a href="#" class="nav-links"
+               <a href="#" class="nav-links select-page"
                   ><i class="fa fa-home" aria-hidden="true"></i> Home</a
                >
             </li>
@@ -30,14 +31,14 @@
                >
             </li>
             <li>
-               <a href="#" class="nav-links"
+               <a href="employeenotifications.html" class="nav-links"
                   ><i class="fa fa-bell" aria-hidden="true"></i>
                   Notifications</a
                >
             </li>
             <li>
                <a href="#" class="nav-links"
-                  ><i class="fa fa-power-off" aria-hidden="true"></i> logout</a
+                  ><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a
                >
             </li>
             <li>
@@ -48,9 +49,86 @@
             </li>
          </ul>
       </nav>
+
       <div class="image-text-box">
-         <div class="bottom-left">Notifications</div>
+         <div class="bottom-left">Home</div>
       </div>
+
+      <div class="container">
+         <div class="header-text">
+            <h2>Find A Job At Your Comfortable Location</h2>
+         </div>
+         <div class="search-container">
+            <div class="quickbar-search-form">
+               <div class="suggestor-skill">
+                  <input
+                     type="text"
+                     class="input1"
+                     placeholder="Eg: Javascript,WebDeveloper"
+                  />
+               </div>
+
+               <div class="suggestor-location">
+                  <input
+                     type="text"
+                     class="input2"
+                     placeholder="Eg;Mumbai,Navi Mumbai"
+                  />
+               </div>
+
+               <div class="search-btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="super-container">
+         <div class="component">
+            <div class="job">
+               <h3>Full Stack Developer</h3>
+               <h4 class="job-type">Part Time</h4>
+            </div>
+
+            <div class="company-location">
+               <a class="locate"
+                  ><i class="fa fa-server" aria-hidden="true"></i>
+                  Facebook.Inc</a
+               >
+               <h5 class="header-five">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> Western
+                  City UK
+               </h5>
+            </div>
+
+            <div class="application">
+               <a href="#" class="apply-button">Apply Now</a>
+            </div>
+         </div>
+         <!-- just repeated the component again to check below of spacing and all gg boiz!! -->
+         <div class="component">
+            <div class="job">
+               <h3>Full Stack Developer</h3>
+               <h4 class="job-type">Part Time</h4>
+            </div>
+
+            <div class="company-location">
+               <a class="locate"
+                  ><i class="fa fa-server" aria-hidden="true"></i>
+                  Facebook.Inc</a
+               >
+               <h5 class="header-five">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> Western
+                  City UK
+               </h5>
+            </div>
+
+            <div class="application">
+               <a href="#" class="apply-button">Apply Now</a>
+            </div>
+         </div>
+      </div>
+
       <script src="../js/employee.js"></script>
    </body>
 </html>
