@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="../css/companypostajob.css" />
+      <link rel="stylesheet" href="../css/navbar.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+         crossorigin="anonymous"
+      />
+      <title>Home Company</title>
+   </head>
+   <body>
+      <nav class="navbar">
+         <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+         </span>
+         <a href="#" class="logo">logo</a>
+         <ul class="main-nav" id="js-menu">
+            <li>
+               <a href="companyhome.html" class="nav-links"
+                  ><i class="fa fa-home" aria-hidden="true"></i> Home</a
+               >
+            </li>
+
+            <li>
+               <a href="#" class="nav-links select-page"
+                  ><i class="fa fa-bell" aria-hidden="true"></i> Post a Job</a
+               >
+            </li>
+            <li>
+               <a href="#" class="nav-links"
+                  ><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a
+               >
+            </li>
+            <li>
+               <a href="#" class="nav-links"
+                  ><i class="fa fa-user" aria-hidden="true"></i> Company Name</a
+               >
+            </li>
+         </ul>
+      </nav>
+
+      <div class="image-text-box">
+         <div class="bottom-left">Post a Job</div>
+      </div>
+
+      <script src="employee.js"></script>
+
+      <div id="container">
+         <form id="form">
+            <div id="emptydiv"></div>
+
+            <div class="form-box">
+               <label>Job Title</label>
+               <input type="text" class="input" id="username" placeholder="Professional UI/UX Designer">
+            </div>
+
+            <div class="form-box">
+               <label>Location</label>
+               <input type="text" class="input" id='location'placeholder='eg. Andheri,Dadar'>
+            </div>
+
+            <div class="form-box">
+               <label id='last'>Job Type</label>
+               <div class="radio"><input type="radio" class="opt"><span>Full Time</span> </div>
+               <div class="radio"><input type="radio" class="opt"><span>Internship</span></div>
+               <div class="radio"><input type="radio" class="opt"><span>Part Time</span></div>
+               <div class="radio"><input type="radio" class="opt"><span>Freelancer</span></div>
+            </div> 
+
+              
+
+            <div class="form-box">
+               <button id="send">Post</button>
+            </div>
+
+         </form>
+      </div>
+
+   </body>
+</html>
+<!-- <img src="./web_dev_img/082-bell.png" alt="N" /> -->

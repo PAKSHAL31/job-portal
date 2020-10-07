@@ -1,3 +1,11 @@
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        include 'php/_dbconnect.php';
+        $category = $_POST['category'];
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +20,8 @@
 
 <body>
         <div class = "wholebody">
-            <div class="navbar"></div>
+            <div class="navbar">
+            </div>
             <div class="container-login">
                 <div class= "wrap-login">
                     <div class = "headerimg">
@@ -20,7 +29,12 @@
                             SIGN IN
                         </span>
                     </div>
-                    <form class="loginform" action="index.html" method="POST">
+                    <form class="loginform" action="index.php" method="POST">
+                        <div class="login-input">
+                            <span class="radio-label">Select one:</span>
+                            <input type="radio" class="radio-btn" name="category" value="Employee"><span class="radio-label">Employee</span>
+                            <input type="radio" class="radio-btn" name="category" value="Company"><span class="radio-label">Company</span>
+                        </div>
                         <div class = "login-input">
                             <input class="input100" type="email" name="email" placeholder="Enter Email" required/>
                         </div>
@@ -32,7 +46,7 @@
                         </div>
                         <div class="txt">
                             Don't have an account?&nbsp
-                            <a href="html/register.html" >
+                            <a href="php/register.php" >
                                  Sign Up 
                             </a>
                         </div>
