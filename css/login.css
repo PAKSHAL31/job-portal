@@ -105,6 +105,7 @@
 .login-btn{
     width:100%;
     display: flex;
+    outline: none;
     flex-wrap: wrap;
 }
 

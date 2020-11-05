@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $sql = "INSERT INTO `company` (`company_email`, `company_pass`, `company_name`, `company_phnumber`, `verified`) VALUES ('$email', '$hash', '$username', '$phnumber', '0');";
                     $result = mysqli_query($conn, $sql);
                     if ($result) {
-                        $showsuccess = true;
+                        $showsuccess = "Account is created !! Wait for Verification";
                     }
                 }
             }
@@ -49,10 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $showerror = "Passwords do not match";
                 } else {
                     $hash = password_hash($password, PASSWORD_DEFAULT);
-                    $sql = "INSERT INTO `employee` (`emp_email`, `emp_password`, `emp_phnumber`, `emp_name`, `emp_cv`, `emp_cvlink`) VALUES ('$email', '$hash', '$username', '$phnumber', '0', '');";
+                    $sql = "INSERT INTO `employee` (`emp_email`, `emp_password`, `emp_phnumber`, `emp_name`, `emp_cv`, `emp_cvlink`) VALUES ('$email', '$hash', '$phnumber', '$username', '0', '');";
                     $result = mysqli_query($conn, $sql);
                     if ($result) {
-                        $showsuccess = true;
+                        $showsuccess = "Account is created !! You can try to login";
                     }
                 }
             }
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php
         if ($showsuccess) {
             echo '<div class="mb-0 alert alert-success alert-dismissible fade show " role="alert">
-                        <strong>Success&nbsp!&nbsp</strong>Account is created !! You can try to login
+                        <strong>Success&nbsp!&nbsp</strong>'. $showsuccess . '
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -96,9 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                          </button>
                      </div>';
         }
-
         ?>
-
         <div class="container-login">
             <div class="wrap-login">
                 <div class="headerimg">

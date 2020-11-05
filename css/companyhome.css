@@ -42,9 +42,9 @@ h3 {
    position: relative;
    top: -31px;
    right: 2%;
-}
+} 
 
-.apply-button {
+ .apply-button {
    text-decoration: none;
    color: white;
    padding: 10px 39px;
@@ -61,7 +61,7 @@ h3 {
    font-weight: 700;
    font-size: x-large;
 }
-.toggle-accepted {
+.toggle-accepted { 
    background-color: #5cdb35;
    margin-right: 10px;
 }

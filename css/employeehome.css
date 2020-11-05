@@ -32,6 +32,9 @@ button:focus {
    font-size: 30px;
    margin-left: 3%;
    margin-top: 10px;
+   cursor: pointer;
+   border: none;
+   background-color: white;
 }
 
 .header-text {
@@ -170,6 +173,10 @@ h3 {
    top: -31px;
    right: 81px;
 }
+.company-location span{
+   padding-left: 10px;
+}
+
 
 .apply-button {
    text-decoration: none;
