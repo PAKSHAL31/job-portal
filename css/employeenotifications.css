@@ -46,29 +46,28 @@ h4 {
 h3 {
    font-size: xx-large;
 }
-.application {
+
+.application{
    float: right;
    position: relative;
-   top: -31px;
-   right: 81px;
+   bottom: 45px;
+   right: 25px;
 }
 
-.apply-button {
+.application span {
    text-decoration: none;
-   color: white;
-   padding: 10px 20px;
-   border-radius: 23px;
-   position: relative;
-   left: 25px;
-   top: -10px;
 }
 
 .toggle-accepted {
-   background-color: #5cdb35;
+   color: #5cdb35 ;
+   font-weight: bolder;
+   font-size: 25px;
 }
 
 .toggle-rejected {
-   background-color: #ff0000;
+   color: #ff0000; ;
+   font-weight: bolder;
+   font-size: 25px;
 }
 
 .company-location {
@@ -81,13 +80,7 @@ h5 {
    color: #4169e1;
 }
 
-@media screen and (max-width: 870px) {
-   .apply-button{
-      left: 80px;
-   }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 840px) {
    .super-container {
       margin: 30px 0 0 0;
       padding: 10px;

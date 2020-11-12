@@ -36,7 +36,7 @@ if (isset($_GET['job_id'])) {
         <a href="#" class="nav-links select-page"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
       </li>
       <li>
-        <a href="#" class="nav-links"><i class="fa fa-file" aria-hidden="true"></i> Resume</a>
+        <a href="cv.php" class="nav-links"><i class="fa fa-file" aria-hidden="true"></i> Resume</a>
       </li>
       <li>
         <a href="employeenotifications.php" class="nav-links"><i class="fa fa-bell" aria-hidden="true"></i> Notifications</a>
