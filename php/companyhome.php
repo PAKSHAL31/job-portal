@@ -4,15 +4,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false) {
   header("location: ../index.php");
 }
 include '_dbconnect.php';
-if(isset($_GET['job_id']) && isset($_GET['emp_no']) && isset($_GET['val'])){
-  // echo $_GET['val'];  
+if (isset($_GET['job_id']) && isset($_GET['emp_no']) && isset($_GET['val'])) {
   $j_id = $_GET['job_id'];
   $e_id = $_GET['emp_no'];
   $val = $_GET['val'];
-  // echo $val;
-  if($val == 1){
+  if ($val == 1) {
     $sqls = "UPDATE `employee_job` SET `ar_val`= '$val' WHERE `emp_no`= '$e_id'  AND `job_id`=  '$j_id' ";
-  }else{
+  } else {
     $sqls = "UPDATE `employee_job` SET `ar_val`='$val' WHERE `emp_no`= '$e_id'  AND `job_id`=  '$j_id' ";
   }
   $result = mysqli_query($conn, $sqls);
@@ -63,36 +61,41 @@ if(isset($_GET['job_id']) && isset($_GET['emp_no']) && isset($_GET['val'])){
 
   <div class="super-container">
     <?php
-       $sql = "SELECT j.job_id, j.job_position, j.job_location, j.job_type , ej.emp_no FROM postajob j JOIN employee_job ej WHERE j.job_id = ej.job_id AND j.company_no =1 AND ej.ar_val = 0;";
-       $result = mysqli_query($conn, $sql);
-       $numrows = mysqli_num_rows($result);
-       if ($numrows == 0) {
-        echo '<h4 style = "color:black;">No Applicants</h4>';
-      }
-      while ($row = mysqli_fetch_assoc($result)) {
-        $sql = "SELECT `emp_name`,`emp_cvlink` FROM `employee` WHERE `emp_no`='" . $row['emp_no'] . "'; ";
-        $ans = mysqli_query($conn, $sql);
-        $numrows = mysqli_fetch_assoc($ans);
-        echo '<div class="component">
+    $sql = "SELECT j.job_id, j.job_position, j.job_location, j.job_type , ej.emp_no FROM postajob j JOIN employee_job ej WHERE j.job_id = ej.job_id AND j.company_no =1 AND ej.ar_val = 0;";
+    $result = mysqli_query($conn, $sql);
+    $numrows = mysqli_num_rows($result);
+    if ($numrows == 0) {
+      echo '<h4 style = "color:black;">No Applicants</h4>';
+    }
+    while ($row = mysqli_fetch_assoc($result)) {
+      $sql = "SELECT `emp_name`,`emp_cvlink` FROM `employee` WHERE `emp_no`='" . $row['emp_no'] . "'; ";
+      $ans = mysqli_query($conn, $sql);
+      $numrows = mysqli_fetch_assoc($ans);
+      echo '<div class="component">
         <div class="job">
-          <h3>'. $numrows['emp_name'] .'</h3>
-          <h4 class="job-type">'. $row['job_type'] .'</h4>
+          <h3>' . $numrows['emp_name'] . '</h3>
+          <h4 class="job-type">' . $row['job_type'] . '</h4>
         </div>
   
         <div class="company-location">
-          <a class="locate"><i class="fa fa-briefcase" aria-hidden="true"></i><span> '. $row['job_position'] .'</span></a>
+          <a class="locate"><i class="fa fa-briefcase" aria-hidden="true"></i><span> ' . $row['job_position'] . '</span></a>
           <h5 class="header-five">
             <i class="fa fa-map-marker" aria-hidden="true"></i><span>' . $row['job_location'] . '</span></h5>
         </div>
   
-        <div class="application">
-          <a href="#" class="apply-button resume">RESUME</a>
-          <a href="companyhome.php?job_id=' . $row['job_id'] . ' &emp_no=' . $row['emp_no'] .' &val=1" class="apply-button toggle-accepted">Accept</a>
-          <a href="companyhome.php?job_id=' . $row['job_id'] . ' &emp_no=' . $row['emp_no'] .' &val=-1" class="apply-button toggle-rejected">Reject</a>
+        <div class="application">';
+
+      if ($numrows['emp_cvlink'] == '') {
+        echo '<a href="#" class="apply-button resume">RESUME</a>';
+      } else {
+        echo '<a href="' . $numrows['emp_cvlink'] . '" class="apply-button resume" target="_blank">RESUME</a>';
+      }
+      echo '<a href="companyhome.php?job_id=' . $row['job_id'] . ' &emp_no=' . $row['emp_no'] . ' &val=1" class="apply-button toggle-accepted">Accept</a>
+          <a href="companyhome.php?job_id=' . $row['job_id'] . ' &emp_no=' . $row['emp_no'] . ' &val=-1" class="apply-button toggle-rejected">Reject</a>
         </div>
       </div>';
-      }
-      ?>
+    }
+    ?>
 
   </div>
 

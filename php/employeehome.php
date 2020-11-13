@@ -90,19 +90,19 @@ if (isset($_GET['job_id'])) {
       } else {
         $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id') AND `job_position` LIKE '%$job_position%' AND `job_location` LIKE '%$job_location%'; ";
       }
-    }else{
+    } else {
       $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id');";
     }
-      $result = mysqli_query($conn, $sql);
-      $numrows = mysqli_num_rows($result);
-      if ($numrows == 0) {
-        echo '<h4 style = "color:black;">No Job Available</h4>';
-      }
-      while ($row = mysqli_fetch_assoc($result)) {
-        $sql = "SELECT `company_name` FROM `company` WHERE `company_no`='" . $row['company_no'] . "' ;";
-        $ans = mysqli_query($conn, $sql);
-        $numrows = mysqli_fetch_assoc($ans);
-        echo '<div class="component">
+    $result = mysqli_query($conn, $sql);
+    $numrows = mysqli_num_rows($result);
+    if ($numrows == 0) {
+      echo '<h4 style = "color:black;">No Job Available</h4>';
+    }
+    while ($row = mysqli_fetch_assoc($result)) {
+      $sql = "SELECT `company_name` FROM `company` WHERE `company_no`='" . $row['company_no'] . "' ;";
+      $ans = mysqli_query($conn, $sql);
+      $numrows = mysqli_fetch_assoc($ans);
+      echo '<div class="component">
         <div class="job">
           <h3>' . $row['job_position'] . ' </h3>
           <h4 class="job-type">' . $row['job_type'] . '</h4>
@@ -118,7 +118,7 @@ if (isset($_GET['job_id'])) {
           <a href="employeehome.php?job_id=' . $row['job_id'] . '" class="apply-button">Apply Now</a>
         </div>
       </div> ';
-      }
+    }
     ?>
   </div>
   <script src="../js/employee.js"></script>

@@ -35,13 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION['navname'] = $row['company_name'];
                         $_SESSION['sess_id'] = $row['company_no'];
                         header("location: php/companyhome.php");
-                    }
-                    else {
+                    } else {
                         $showerror = "Unable to login";
                     }
-                }else if($row['verified'] == -1){
+                } else if ($row['verified'] == -1) {
                     $showerror = "Contact Admin for Verification";
-                }else {
+                } else {
                     $showerror = "Wait for verification";
                 }
             } else {

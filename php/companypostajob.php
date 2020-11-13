@@ -90,12 +90,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
 
       <div class="form-box">
-        <button id="send" name="postjob" >Post</button>
+        <button id="send" name="postjob">Post</button>
       </div>
     </form>
-    <?php 
-    if($success){
-    echo '<div id="post">
+    <?php
+    if ($success) {
+      echo '<div id="post">
       <span>Posted!!!</span>
     </div>';
     }

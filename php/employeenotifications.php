@@ -5,8 +5,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] = false) {
 }
 include '_dbconnect.php';
 $e_id = $_SESSION['sess_id'];
-//SELECT `job_id`, `ar_val` FROM `employee_job` WHERE `emp_no`=2 AND `ar_val`!= 0
-
 ?>
 
 <!DOCTYPE html>
