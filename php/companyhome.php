@@ -4,6 +4,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false) {
   header("location: ../index.php");
 }
 include '_dbconnect.php';
+$c_id = $_SESSION['sess_id'];
 if (isset($_GET['job_id']) && isset($_GET['emp_no']) && isset($_GET['val'])) {
   $j_id = $_GET['job_id'];
   $e_id = $_GET['emp_no'];
@@ -37,7 +38,7 @@ if (isset($_GET['job_id']) && isset($_GET['emp_no']) && isset($_GET['val'])) {
     <span class="navbar-toggle" id="js-navbar-toggle">
       <i class="fas fa-bars"></i>
     </span>
-    <a href="#" class="logo">logo</a>
+    <img src="../web_dev_img/dailysmarty.png" class="logo">
     <ul class="main-nav" id="js-menu">
       <li>
         <a href="#" class="nav-links select-page"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
@@ -61,7 +62,7 @@ if (isset($_GET['job_id']) && isset($_GET['emp_no']) && isset($_GET['val'])) {
 
   <div class="super-container">
     <?php
-    $sql = "SELECT j.job_id, j.job_position, j.job_location, j.job_type , ej.emp_no FROM postajob j JOIN employee_job ej WHERE j.job_id = ej.job_id AND j.company_no =1 AND ej.ar_val = 0;";
+    $sql = "SELECT j.job_id, j.job_position, j.job_location, j.job_type , ej.emp_no FROM postajob j JOIN employee_job ej WHERE j.job_id = ej.job_id AND j.company_no = '$c_id' AND ej.ar_val = 0;";
     $result = mysqli_query($conn, $sql);
     $numrows = mysqli_num_rows($result);
     if ($numrows == 0) {

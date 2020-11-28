@@ -24,7 +24,7 @@ $e_id = $_SESSION['sess_id'];
     <span class="navbar-toggle" id="js-navbar-toggle">
       <i class="fas fa-bars"></i>
     </span>
-    <a href="#" class="logo">logo</a>
+    <img src="../web_dev_img/dailysmarty.png" class="logo">
     <ul class="main-nav" id="js-menu">
       <li>
         <a href="employeehome.php" class="nav-links"><i class="fa fa-home" aria-hidden="true"></i> Home</a>

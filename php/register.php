@@ -77,11 +77,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="wholebody">
-        <div class="navbar"></div>
+        <div class="navbar1">
+            <div class="head1"><img src="../web_dev_img/dailysmarty.png" class="logo"></div>
+            <div class="head"><span>JobGuru</span></div>
+        </div>
         <?php
         if ($showsuccess) {
             echo '<div class="mb-0 alert alert-success alert-dismissible fade show " role="alert">
-                        <strong>Success&nbsp!&nbsp</strong>'. $showsuccess . '
+                        <strong>Success&nbsp!&nbsp</strong>' . $showsuccess . '
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
